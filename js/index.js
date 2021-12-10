@@ -4,15 +4,18 @@ const vid = document.querySelector(".video-player video");
 function pressPlay() {
   if (vid.paused || vid.ended) {
     vid.play();
-    vid.parentElement.classList.add("playing");
   } else {
     vid.pause();
-    vid.parentElement.classList.remove("playing");
   }
 }
 
 function vidPlaying() {
   vid.controls = true;
+  vid.parentElement.classList.add("playing");
+}
+
+function vidPaused() {
+  vid.parentElement.classList.remove("playing");
 }
 
 function vidEnded() {
