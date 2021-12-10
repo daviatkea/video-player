@@ -3,15 +3,10 @@ const vid = document.querySelector(".video-player video");
 
 function pressPlay() {
   if (vid.paused || vid.ended) {
-    vid.controls = true;
     vid.play();
-  } else {
-    vid.pause();
+    vid.parentElement.classList.add("playing");
+    vid.controls = true;
   }
-}
-
-function vidPlaying() {
-  vid.parentElement.classList.add("playing");
 }
 
 function vidEnded() {
@@ -22,6 +17,5 @@ function vidEnded() {
   vid.controls = false;
 }
 
-vid.addEventListener("click", pressPlay);
+btn.addEventListener("click", pressPlay);
 vid.addEventListener("ended", vidEnded);
-vid.addEventListener("play", vidPlaying);
