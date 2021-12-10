@@ -29,3 +29,4 @@ function vidEnded() {
 vid.addEventListener("click", pressPlay);
 vid.addEventListener("ended", vidEnded);
 vid.addEventListener("play", vidPlaying);
+vid.addEventListener("pause", vidPaused);
