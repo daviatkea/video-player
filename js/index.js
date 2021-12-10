@@ -5,7 +5,6 @@ function pressPlay() {
   if (vid.paused || vid.ended) {
     vid.play();
     vid.parentElement.classList.add("playing");
-    vid.controls = true;
   } else {
     vid.pause();
     vid.parentElement.classList.remove("playing");
