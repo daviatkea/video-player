@@ -11,7 +11,7 @@ function pressPlay() {
   }
 }
 
-function vidPLaying() {
+function vidPlaying() {
   vid.controls = true;
 }
 
