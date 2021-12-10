@@ -3,6 +3,7 @@ const vid = document.querySelector(".video-player video");
 
 function pressPlay() {
   if (vid.paused || vid.ended) {
+    vid.controls = true;
     vid.play();
   } else {
     vid.pause();
@@ -10,7 +11,6 @@ function pressPlay() {
 }
 
 function vidPlaying() {
-  vid.controls = true;
   vid.parentElement.classList.add("playing");
 }
 
