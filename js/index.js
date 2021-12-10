@@ -11,6 +11,10 @@ function pressPlay() {
   }
 }
 
+function vidPLaying() {
+  vid.controls = true;
+}
+
 function vidEnded() {
   if (vid.parentElement.classList.contains("playing")) {
     vid.parentElement.classList.remove("playing");
@@ -21,3 +25,4 @@ function vidEnded() {
 
 vid.addEventListener("click", pressPlay);
 vid.addEventListener("ended", vidEnded);
+vid.addEventListener("ended", vidPlaying);
