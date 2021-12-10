@@ -14,10 +14,6 @@ function vidPlaying() {
   vid.parentElement.classList.add("playing");
 }
 
-function vidPaused() {
-  vid.parentElement.classList.remove("playing");
-}
-
 function vidEnded() {
   if (vid.parentElement.classList.contains("playing")) {
     vid.parentElement.classList.remove("playing");
@@ -29,4 +25,3 @@ function vidEnded() {
 vid.addEventListener("click", pressPlay);
 vid.addEventListener("ended", vidEnded);
 vid.addEventListener("play", vidPlaying);
-vid.addEventListener("pause", vidPaused);
